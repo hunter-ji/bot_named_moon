@@ -11,8 +11,8 @@ def arecord_voice(filename):
 
 
 def get_token():
-    apiKey = "GM75YwcRmCtbAZQKoaBfKmSN"
-    secretKey = "b03d191ee8dc072d1972d0d98896f0e7"
+    apiKey = "your_apikey"
+    secretKey = "your_secretkey"
  
     auth_url = "https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=" + apiKey + "&client_secret=" + secretKey;
  
@@ -45,7 +45,7 @@ def use_cloud(filename, token):
     f_len = nf * 2
     audio_data = fp.readframes(nf)
  
-    cuid = "9619749" 
+    cuid = "your_cuid" 
     srv_url = 'http://vop.baidu.com/server_api' + '?cuid=' + cuid + '&token=' + token
     http_header = [
         'Content-Type: audio/pcm; rate=8000',
