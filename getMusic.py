@@ -5,9 +5,9 @@ import re,os
 import json
 import urllib
 import urllib2
-import sys  
-reload(sys)  
-sys.setdefaultencoding('utf-8') 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 class GetMusic:
 
@@ -24,10 +24,10 @@ class GetMusic:
         decoded = json.loads(con)
         #print decoded
         return decoded['result']['songs'][0]['id']
-    
+
     def PlaySong(self, id):
-#        id = self.getID(name) 
-        url = 'http://120.27.4.161:3000/music/url?id=%s'%(id)
+#        id = self.getID(name)
+        url = 'http://the_ip:3000/music/url?id=%s'%(id)
         req = urllib2.Request(url)
         con = urllib2.urlopen(req).read()
         data = json.loads(con)

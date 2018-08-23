@@ -4,7 +4,7 @@ import re
 import requests
 import random
 import sys
-reload(sys) 
+reload(sys)
 sys.setdefaultencoding( "utf-8" )
 
 class WORM:
@@ -14,7 +14,7 @@ class WORM:
 
     def worm(self):
         headers = {
-                'User-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.52' 
+                'User-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.52'
                 }
         response = requests.get(self.url, headers=headers)
         html = response.text
@@ -31,7 +31,7 @@ class WORM:
 
     def getrandom(self, data):
         thelen = len(data)-1
-        n = random.randint(0, thelen) 
+        n = random.randint(0, thelen)
         return data[n]
 
 if __name__ == '__main__':
